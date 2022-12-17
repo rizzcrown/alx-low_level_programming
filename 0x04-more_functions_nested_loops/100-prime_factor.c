@@ -1,18 +1,31 @@
 #include <stdio.h>
-#include <math.h>
 
-int main(void) {
-    long long int num = 612852475143;
-    int largestPrimeFactor = 2;
+/**
+* main - prints the largest prime factor of 612852475143
+* Return: 0 if executed successfully
+*/
 
-    while (num > 1) {
-        while (num % largestPrimeFactor == 0) {
-            num /= largestPrimeFactor;
-        }
-        largestPrimeFactor++;
-    }
+int main(void)
+{
+	long int num = 612852475143;
+	long int largest_prime_factor = 0;
+	long int i;
 
-    printf("%d\n", largestPrimeFactor - 1);
+	for (i = 2; i < num; i++)
+	{
+		if (num % i == 0)
+		{
+			if (i > largest_prime_factor)
+				largest_prime_factor = i;
 
-    return 0;
+			num = num / i;
+		}
+	}
+
+	if (num > largest_prime_factor)
+		largest_prime_factor = num;
+
+	printf("%ld\n", largest_prime_factor);
+
+	return (0);
 }
