@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main (){
+int print_sign(int n);
+int main (void)
+{
     print_sign(3094);
     return 0;
 }
