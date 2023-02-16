@@ -9,6 +9,9 @@
 
 int _pow(int num, int exp)
 {
+	/**
+	 * This function computes the power of a given number 
+	*/
 	int result = 1;
 
 	if (exp == 0)
@@ -28,6 +31,10 @@ int _pow(int num, int exp)
 
 unsigned int binary_to_uint(const char *b)
 {
+	/**
+	 * this function takes a single argument of a binary number 
+	 * represented as a string 
+	*/
 	unsigned int i = 0, num = 0, len = 0;
 
 	if (b == NULL)
