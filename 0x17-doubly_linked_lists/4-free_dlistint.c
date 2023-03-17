@@ -2,16 +2,19 @@
 
 /**
  * free_dlistint - frees a dlistint_t list
- * @head: pointer to head node
+ * @head: head
+ * Return: void
  */
+
 void free_dlistint(dlistint_t *head)
 {
-    dlistint_t *current;
+	dlistint_t *current = head;
 
-    while (head != NULL)
-    {
-        current = head;
-        head = head->next;
-        free(current);
-    }
+	while (current != NULL)
+	{
+		head = current;
+		free(head);
+		current = current->next;
+	}
+	free(current);
 }
