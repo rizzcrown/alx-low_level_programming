@@ -1,0 +1,4 @@
+*.o
+0-main.c
+len
+liball.so
